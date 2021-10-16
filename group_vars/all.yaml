@@ -1,3 +1,3 @@
 OSPF:
-  RID: "10"
+  RID: "11"
   NETWORK: "0.0.0.0 0.0.0.0 area 0"
