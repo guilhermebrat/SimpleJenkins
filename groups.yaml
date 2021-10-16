@@ -1,0 +1,14 @@
+---
+
+cisco_ios:
+    password: 'admin123'
+    platform: 'ios'
+    connections_options:
+        napalm:
+            extras:
+                optional_args:
+                    global_delay_factor: 4
+    data:
+        local_user: admin
+        local_password: admin
+        privilege: 15
