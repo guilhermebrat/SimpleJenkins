@@ -1,4 +1,5 @@
 from nornir import InitNornir
+import os
 from nornir_scrapli.tasks import send_configs
 from nornir_utils.plugins.functions import print_result
 from nornir.core.exceptions import NornirExecutionError
@@ -6,7 +7,11 @@ from nornir_jinja2.plugins.tasks import template_file
 from nornir_utils.plugins.tasks.data import load_yaml
 
 
+
 nr = InitNornir(config_file="config.yaml")
+
+nr.inventory.defaults.username = os.getenv("USERNAME")
+nr.inventory.defaults.password = os.getenv("PASSWORD")
 
 def pull_vars(task):
     results = task.run(task=load_yaml, file="group_vars/all.yaml")

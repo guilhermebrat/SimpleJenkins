@@ -1,9 +1,12 @@
 from nornir import InitNornir
 from nornir_scrapli.tasks import send_command
 from nornir_utils.plugins.functions import print_result
+import os
 
 nr = InitNornir(config_file="config.yaml")
 
+nr.inventory.defaults.username = os.getenv("USERNAME")
+nr.inventory.defaults.password = os.getenv("PASSWORD")
 
 def pull_info (task):
     response = task.run(task=send_command, command= "show ip ospf neighbor")

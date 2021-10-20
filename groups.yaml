@@ -1,7 +1,6 @@
 ---
 
 cisco_ios:
-    password: 'admin123'
     platform: 'ios'
     connections_options:
         napalm:
