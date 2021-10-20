@@ -21,7 +21,7 @@ result = nr.run(task=pull_info)
 
 for host in nr.inventory.hosts.values():
     state = result[f"{host}"][0].result
-    assert "FULL" in state, "FAILED"
+    assert "GGB" in state, "FAILED"
 print("PASSED")
 
 
