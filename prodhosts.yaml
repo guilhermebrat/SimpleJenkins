@@ -1,0 +1,15 @@
+---
+R1:
+    hostname: 192.168.227.21
+    groups:
+      - cisco_ios
+
+R2:
+    hostname: 192.168.227.22
+    groups:
+      - cisco_ios
+
+R3:
+    hostname: 192.168.227.23
+    groups:
+      - cisco_ios
