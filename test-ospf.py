@@ -30,6 +30,3 @@ for host in nr.inventory.hosts.values():
     state = result[f"{host}"][0].result
     assert "FULL" in state, "FAILED"
 print("PASSED")
-
-
-

@@ -9,7 +9,6 @@ import sys
 
 config_file = sys.argv[1]
 
-
 nr = InitNornir(config_file=config_file)
 
 nr.inventory.defaults.username = os.getenv("USERNAME")
