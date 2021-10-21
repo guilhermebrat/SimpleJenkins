@@ -14,6 +14,7 @@ nr = InitNornir(config_file=config_file)
 nr.inventory.defaults.username = os.getenv("USERNAME")
 nr.inventory.defaults.password = os.getenv("PASSWORD")
 
+
 def pull_vars(task):
     results = task.run(task=load_yaml, file="group_vars/all.yaml")
     task.host['facts'] = results.result
