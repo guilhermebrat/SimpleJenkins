@@ -5,9 +5,9 @@ import os
 import sys
 
 
-config_file = sys.argv[1]
+config = sys.argv[1]
 
-nr = InitNornir(config_file=config_file)
+nr = InitNornir(config_file=config)
 
 nr.inventory.defaults.username = os.getenv("USERNAME")
 nr.inventory.defaults.password = os.getenv("PASSWORD")
